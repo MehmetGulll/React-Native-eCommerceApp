@@ -451,7 +451,7 @@ function DrawerNavigator() {
                 >
                   <View style={{ alignItems: "center", padding: 50 }}>
                     <Text style={{ fontSize: 18, fontWeight: "500" }}>
-                      Mehmet Rıdvan Gül
+                      Mehmet Gül
                     </Text>
                     <Text style={{ fontSize: 15 }}>info@gmail.com</Text>
                     <Text style={{ marginTop: 15, fontSize: 16 }}>
@@ -524,7 +524,7 @@ function DrawerNavigator() {
                               <Text style={styles.accountSettingText}>
                                 Adınız:
                               </Text>
-                              <Input placeholder={""} value={"Mehmet Rıdvan"} />
+                              <Input placeholder={""} value={"Mehmet"} />
                             </View>
                             <View style={{ flex: 1 }}>
                               <Text style={styles.accountSettingText}>
@@ -703,7 +703,7 @@ function DrawerNavigator() {
                               onPress={() => setOrderDetail(true)}
                             >
                               <Text style={{ fontSize: 10, flex: 1 }}>
-                                20231206014144805
+                                11111111111111111
                               </Text>
                               <Text style={{ fontSize: 10, flex: 1 }}>
                                 Çrş 06 Ara 2023 13:41
@@ -763,7 +763,7 @@ function DrawerNavigator() {
                                         Sipariş Kodu:
                                       </Text>
                                       <Text style={styles.orderDetailText}>
-                                        20231206014144805
+                                        11111111111111111
                                       </Text>
                                     </View>
                                     <View
@@ -794,12 +794,12 @@ function DrawerNavigator() {
                                       <View style={{ flex: 1, borderWidth: 1 }}>
                                         <Text>Ödeme Türü: EFT/Havale, </Text>
                                         <Text>
-                                          Aktarılan banka: ÇAMKIRAN OTOMOTİV
-                                          AKBANK,
+                                          Aktarılan banka: eCommerce
+                                          BANK,
                                         </Text>
                                         <Text>Hesap numarası: 16808,</Text>
                                         <Text>
-                                          IBAN: TR850004600284888000016808
+                                          IBAN: TR111111111111111111111111
                                         </Text>
                                       </View>
                                     </View>
@@ -847,8 +847,7 @@ function DrawerNavigator() {
 
                                     <View style={{ flexDirection: "row" }}>
                                       <Text style={styles.orderDetailText}>
-                                        KONA IÇIN UYUMLU KLIMA DÜĞME
-                                        KAPLAMA-PİANO BLACK-
+                                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                       </Text>
                                       <Text style={styles.orderDetailText}>
                                         Miktar: 1
@@ -865,8 +864,7 @@ function DrawerNavigator() {
                                     </View>
                                     <View style={{ flexDirection: "row" }}>
                                       <Text style={styles.orderDetailText}>
-                                        3/4 SERISI F30 F32 F362012-2018 IÇIN
-                                        UYUMLU AYNA KAPAĞI PIANO BLACK-
+                                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                       </Text>
                                       <Text style={styles.orderDetailText}>
                                         Miktar: 1
@@ -996,7 +994,7 @@ function DrawerNavigator() {
                               }}
                             >
                               <Text style={{ fontSize: 10, flex: 1 }}>
-                                20231206014144805
+                                11111111111111111
                               </Text>
                               <Text style={{ fontSize: 10, flex: 1 }}>
                                 Çrş 06 Ara 2023 13:41
@@ -1014,7 +1012,7 @@ function DrawerNavigator() {
                               }}
                             >
                               <Text style={{ fontSize: 10, flex: 1 }}>
-                                20231206014144805
+                                11111111111111111
                               </Text>
                               <Text style={{ fontSize: 10, flex: 1 }}>
                                 Çrş 06 Ara 2023 13:41
