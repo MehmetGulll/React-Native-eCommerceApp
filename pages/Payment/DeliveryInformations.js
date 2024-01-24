@@ -73,7 +73,7 @@ function DeliveryInformations() {
               <Text style={{ textTransform: "uppercase" }}>info@gmail.com</Text>
             </View>
             <View style={styles.billInformations}>
-              <Text style={styles.billInformationsText}>Phone</Text>
+              <Text style={styles.billInformationsText}>Telefon</Text>
               <Text style={{ textTransform: "uppercase" }}>
                 +90 555 555 55 55
               </Text>
