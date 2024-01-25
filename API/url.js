@@ -1,1 +1,0 @@
-export const apihost = "http://camkirangaraj.com/json/"
