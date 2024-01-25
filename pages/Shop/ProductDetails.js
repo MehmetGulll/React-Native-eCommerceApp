@@ -1,12 +1,6 @@
 import React, { useState, useContext, useRef } from "react";
-import {
-  View,
-  Text,
-  ScrollView,
-  Image,
-  StyleSheet,
-  Dimensions,
-} from "react-native";
+import { View, Text, ScrollView, Image } from "react-native";
+import { styles } from "./styles";
 import { GlobalContext } from "../../Context/GlobalStates";
 import Icon from "react-native-vector-icons/AntDesign";
 import Button from "../../components/Button";
@@ -14,8 +8,6 @@ import { Picker } from "@react-native-picker/picker";
 import { useNavigation } from "@react-navigation/native";
 import Input from "../../components/Input";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-
-const windowWidth = Dimensions.get("window").width;
 
 function ProductDetails({ route }) {
   const { item } = route.params;
@@ -157,7 +149,7 @@ function ProductDetails({ route }) {
               <Image
                 key={index}
                 source={{ uri: url }}
-                style={styles.itemImage}
+                style={styles.itemImage2}
                 onError={(error) => console.log("Hata", error)}
                 resizeMode="contain"
               />
@@ -961,64 +953,4 @@ function ProductDetails({ route }) {
   );
 }
 
-const styles = StyleSheet.create({
-  itemImage: {
-    width: windowWidth,
-    height: 380,
-  },
-  itemInformations: {
-    backgroundColor: "white",
-    borderRadius: 12,
-    marginTop: 12,
-  },
-  itemName: {
-    alignItems: "center",
-    marginHorizontal: 15,
-    marginTop: 15,
-  },
-  itemDescription: {
-    alignItems: "center",
-    marginHorizontal: 15,
-    marginTop: 15,
-  },
-  quantityContainer: {
-    flexDirection: "row",
-    marginHorizontal: 15,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 25,
-  },
-  quantityCount: {
-    flexDirection: "row",
-    marginLeft: 20,
-    borderWidth: 1,
-    paddingHorizontal: 2,
-    paddingVertical: 3,
-    borderColor: "#d3d3d3",
-    borderRadius: 5,
-    alignItems: "center",
-  },
-  itemPriceAddToCart: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginHorizontal: 15,
-    marginTop: 20,
-    marginBottom: 30,
-  },
-  itemFeatures: {
-    marginBottom: 70,
-  },
-  itemFeatureLabel: {
-    borderWidth: 1,
-    padding: 5,
-    borderColor: "#ee3a1f",
-    borderRadius: 5,
-    fontWeight: "500",
-  },
-  installmentText: {
-    borderWidth: 1,
-    padding: 5,
-  },
-});
 export default ProductDetails;

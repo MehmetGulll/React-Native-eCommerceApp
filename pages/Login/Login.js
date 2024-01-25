@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { View, StyleSheet, Text, TouchableOpacity, Alert } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
+import { styles } from "./styles";
 import Input from "../../components/Input";
 import { useNavigation } from "@react-navigation/native";
 import Button from "../../components/Button";
-import axios from "axios";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -57,19 +57,5 @@ function Login() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  loginTitle: {
-    marginLeft: 15,
-    marginTop: 50,
-  },
-  inputsContainer: {
-    marginTop: 18,
-    marginHorizontal: 15,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
 
 export default Login;

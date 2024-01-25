@@ -1,12 +1,6 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-  Alert
-} from "react-native";
+import { View, Text, TouchableOpacity, Alert } from "react-native";
+import { styles } from "./styles";
 import { useNavigation } from "@react-navigation/native";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
@@ -18,11 +12,11 @@ function SignUp() {
   const navigation = useNavigation();
   const [gender, setGender] = useState();
   const [username, setUsername] = useState("");
-  const [name,setName] = useState("");
-  const [surname,setSurname] = useState("");
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
   const [phone, setPhone] = useState();
   const [mail, setMail] = useState("");
-  const [password,setPassword] = useState("");
+  const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
   const [date, setDate] = useState(new Date());
   const [mode, setMode] = useState("date");
@@ -40,13 +34,21 @@ function SignUp() {
   const showDatepicker = () => {
     showMode("date");
   };
-  const signUp = ()=>{
-    if(!username || !surname || !phone || !mail || !gender || !password || rePassword){
-      Alert.alert("Hata", "Lütfen Alanları Doldurunuz!",[
-        {text:'Tamam', style:'cancel'}
-      ])
+  const signUp = () => {
+    if (
+      !username ||
+      !surname ||
+      !phone ||
+      !mail ||
+      !gender ||
+      !password ||
+      rePassword
+    ) {
+      Alert.alert("Hata", "Lütfen Alanları Doldurunuz!", [
+        { text: "Tamam", style: "cancel" },
+      ]);
     }
-  }
+  };
   return (
     <KeyboardAwareScrollView style={{ flex: 1, backgroundColor: "#F0F8FF" }}>
       <View style={styles.signUpTitle}>
@@ -56,19 +58,32 @@ function SignUp() {
         </Text>
       </View>
       <View style={styles.inputsContainer}>
-        <Input placeholder={"Kullanıcı Adı"}  onChangeText={(text)=> setUsername(text)}/>
+        <Input
+          placeholder={"Kullanıcı Adı"}
+          onChangeText={(text) => setUsername(text)}
+        />
       </View>
       <View style={styles.inputsContainer}>
-        <Input placeholder={"Ad"} onChangeText={(text)=> setName(text)} />
+        <Input placeholder={"Ad"} onChangeText={(text) => setName(text)} />
       </View>
       <View style={styles.inputsContainer}>
-        <Input placeholder={"Soyad"} onChangeText={(text)=> setSurname(text)} />
+        <Input
+          placeholder={"Soyad"}
+          onChangeText={(text) => setSurname(text)}
+        />
       </View>
       <View style={styles.inputsContainer}>
-        <Input placeholder={"Cep Telefonu"} keyboardType={"numeric"}  onChangeText={(text)=> setPhone(text)}/>
+        <Input
+          placeholder={"Cep Telefonu"}
+          keyboardType={"numeric"}
+          onChangeText={(text) => setPhone(text)}
+        />
       </View>
       <View style={styles.inputsContainer}>
-        <Input placeholder={"E-Mail Adresi"} onChangeText={(text)=> setMail(text)} />
+        <Input
+          placeholder={"E-Mail Adresi"}
+          onChangeText={(text) => setMail(text)}
+        />
       </View>
       <View style={styles.inputsContainer}>
         <View style={{ flex: 1 }}>
@@ -125,10 +140,18 @@ function SignUp() {
         </View>
       </View>
       <View style={styles.inputsContainer}>
-        <Input placeholder={"Şifre"} secureTextEntry={true} onChangeText={(text)=> setPassword(text)} />
+        <Input
+          placeholder={"Şifre"}
+          secureTextEntry={true}
+          onChangeText={(text) => setPassword(text)}
+        />
       </View>
       <View style={styles.inputsContainer}>
-        <Input placeholder={"Şifre Tekrarı"} secureTextEntry={true} onChangeText={(text)=>setRePassword(text)}/>
+        <Input
+          placeholder={"Şifre Tekrarı"}
+          secureTextEntry={true}
+          onChangeText={(text) => setRePassword(text)}
+        />
       </View>
       <View style={{ marginTop: 15, marginHorizontal: 15 }}>
         <Button
@@ -137,7 +160,7 @@ function SignUp() {
           color={"#fff"}
           fontSize={18}
           backgroundColor={"#08e8de"}
-          onPress={()=>signUp()}
+          onPress={() => signUp()}
         />
       </View>
       <View
@@ -145,7 +168,7 @@ function SignUp() {
           flexDirection: "row",
           justifyContent: "center",
           marginTop: 25,
-          marginBottom:15
+          marginBottom: 15,
         }}
       >
         <Text>Daha önce hesabınız var mı?</Text>
@@ -157,18 +180,4 @@ function SignUp() {
   );
 }
 
-const styles = StyleSheet.create({
-  signUpTitle: {
-    marginLeft: 15,
-    marginTop: 50,
-  },
-
-  inputsContainer: {
-    marginTop: 18,
-    marginHorizontal: 15,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
 export default SignUp;

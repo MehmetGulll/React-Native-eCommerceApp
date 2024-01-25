@@ -1,13 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Login from './pages/Login/Login';
-import Router from './Router';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View } from "react-native";
+import Router from "./Router";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Router/>
-      <StatusBar style = "auto" />
+      <Router />
+      <StatusBar style="auto" />
     </View>
   );
 }
@@ -15,6 +14,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
 });

@@ -1,12 +1,6 @@
-import React, { useContext} from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  Image,
-  ScrollView,
-} from "react-native";
+import React, { useContext } from "react";
+import { View, Text, FlatList, Image, ScrollView } from "react-native";
+import { styles } from "./styles";
 import { useNavigation } from "@react-navigation/native";
 import { GlobalContext } from "../../Context/GlobalStates";
 import Icon2 from "react-native-vector-icons/FontAwesome";
@@ -74,10 +68,10 @@ function Cart() {
                             color: "#1F51FF",
                           }}
                         >
-                           {new Intl.NumberFormat("tr-TR", {
-                    style: "currency",
-                    currency: "TRY",
-                  }).format(Number(item.price))}
+                          {new Intl.NumberFormat("tr-TR", {
+                            style: "currency",
+                            currency: "TRY",
+                          }).format(Number(item.price))}
                         </Text>
                       </View>
                       <View style={{ flexDirection: "row", marginLeft: 50 }}>
@@ -129,7 +123,7 @@ function Cart() {
                 <Text style={styles.priceText}>Toplam</Text>
                 <Text style={{ fontSize: 20, fontWeight: "600" }}>100 TL</Text>
               </View>
-              <View style = {{marginTop:10}}>
+              <View style={{ marginTop: 10 }}>
                 <Button
                   text={"Siparişi Tamamla"}
                   backgroundColor={"#0F52BA"}
@@ -161,54 +155,4 @@ function Cart() {
     </ScrollView>
   );
 }
-const styles = StyleSheet.create({
-  cartItem: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginHorizontal: 15,
-    marginTop: 15,
-    marginBottom: 20,
-    backgroundColor: "#fff",
-    shadowColor: "#000000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.7,
-    shadowRadius: 3.84,
-    elevation: 9,
-    borderRadius: 12,
-    padding: 8,
-  },
-  cartInformations: {
-    marginLeft: 30,
-  },
-  itemImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 12,
-  },
-  quantityCount: {
-    flexDirection: "row",
-    marginLeft: 20,
-    borderWidth: 1,
-    paddingHorizontal: 2,
-    paddingVertical: 3,
-    borderColor: "#d3d3d3",
-    borderRadius: 5,
-    alignItems: "center",
-  },
-  priceStyle: {
-    flexDirection: "row",
-    borderBottomWidth: 1,
-    padding: 15,
-    borderColor: "#B6D0E2",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  priceText: {
-    fontSize: 16,
-    fontWeight: "500",
-  },
-});
 export default Cart;

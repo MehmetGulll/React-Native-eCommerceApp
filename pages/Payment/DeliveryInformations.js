@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import {
   View,
   Text,
-  StyleSheet,
   TouchableOpacity,
   Modal,
   ScrollView,
   Alert,
 } from "react-native";
+import { styles } from "./styles";
 import RadioForm from "react-native-simple-radio-button";
 import Icon from "react-native-vector-icons/Ionicons";
 import Button from "../../components/Button";
@@ -290,28 +290,5 @@ function DeliveryInformations() {
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  billInformationsContainer: {
-    backgroundColor: "white",
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-  },
-  billInformations: {
-    marginTop: 10,
-  },
-  priceStyle: {
-    flexDirection: "row",
-    padding: 15,
-    borderColor: "#B6D0E2",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 63,
-  },
-  billInformationsText: {
-    fontWeight: "700",
-    fontSize: 18,
-  },
-});
 
 export default DeliveryInformations;

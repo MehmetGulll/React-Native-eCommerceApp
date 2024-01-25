@@ -1,12 +1,6 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
+import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
+import { styles } from "./styles";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 
@@ -77,518 +71,527 @@ function PaymentInformations() {
           </TouchableOpacity>
         </View>
         {selectedPayment === "eft" ? (
-          <View
-           
-          >
-            <View style = {{borderWidth:1, borderColor:'#D3D3D3', marginTop:10, padding:5,}}>
-            <TouchableOpacity
-              style={[
-                styles.bankInformations,
-                selectedBank === "akbank"
-                  ? { backgroundColor: "#6eaa5e" }
-                  : { backgroundColor: "white" },
-              ]}
-              onPress={() => setSelectedBank("akbank")}
+          <View>
+            <View
+              style={{
+                borderWidth: 1,
+                borderColor: "#D3D3D3",
+                marginTop: 10,
+                padding: 5,
+              }}
             >
-              <Image
-                source={{
-                  uri: "https://voltmotor.com.tr/wp-content/uploads/2021/06/akbank-logo.jpg",
-                }}
-                width={80}
-                height={80}
-                resizeMode="contain"
-              />
-              <View style={{ flexDirection: "column", gap: 5 }}>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Sahibi:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    Mehmet Rıdvan Gül
-                  </Text>
+              <TouchableOpacity
+                style={[
+                  styles.bankInformations,
+                  selectedBank === "akbank"
+                    ? { backgroundColor: "#6eaa5e" }
+                    : { backgroundColor: "white" },
+                ]}
+                onPress={() => setSelectedBank("akbank")}
+              >
+                <Image
+                  source={{
+                    uri: "https://voltmotor.com.tr/wp-content/uploads/2021/06/akbank-logo.jpg",
+                  }}
+                  width={80}
+                  height={80}
+                  resizeMode="contain"
+                />
+                <View style={{ flexDirection: "column", gap: 5 }}>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Sahibi:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      Mehmet Rıdvan Gül
+                    </Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Numarası:</Text>
+                    <Text style={styles.accountInformationText}> 111111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Şube Kodu:</Text>
+                    <Text style={styles.accountInformationText}> 111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>IBAN:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      TR1111111111111111
+                    </Text>
+                  </View>
                 </View>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Numarası:</Text>
-                  <Text style={styles.accountInformationText}> 111111</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.bankInformations,
+                  selectedBank === "ing"
+                    ? { backgroundColor: "#6eaa5e" }
+                    : { backgroundColor: "white" },
+                ]}
+                onPress={() => setSelectedBank("ing")}
+              >
+                <Image
+                  source={{
+                    uri: "https://www.ing.com.tr/F/Documents/Images/kurumsal_logo_genel_mudurluk/ING_Logo_TuruncuBG_Big.png",
+                  }}
+                  width={80}
+                  height={80}
+                  resizeMode="contain"
+                />
+                <View style={{ flexDirection: "column", gap: 5 }}>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Sahibi:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      Mehmet Rıdvan Gül
+                    </Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Numarası:</Text>
+                    <Text style={styles.accountInformationText}> 111111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Şube Kodu:</Text>
+                    <Text style={styles.accountInformationText}> 111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>IBAN:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      TR1111111111111111
+                    </Text>
+                  </View>
                 </View>
-                <View style={styles.accountInformation}>
-                  <Text>Şube Kodu:</Text>
-                  <Text style={styles.accountInformationText}> 111</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.bankInformations,
+                  selectedBank === "isbank"
+                    ? { backgroundColor: "#6eaa5e" }
+                    : { backgroundColor: "white" },
+                ]}
+                onPress={() => setSelectedBank("isbank")}
+              >
+                <Image
+                  source={{
+                    uri: "https://geoim.bloomberght.com/2019/11/06/ver1573060975/2237390_620x349.jpg",
+                  }}
+                  width={80}
+                  height={80}
+                  resizeMode="contain"
+                />
+                <View style={{ flexDirection: "column", gap: 5 }}>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Sahibi:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      Mehmet Rıdvan Gül
+                    </Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Numarası:</Text>
+                    <Text style={styles.accountInformationText}> 111111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Şube Kodu:</Text>
+                    <Text style={styles.accountInformationText}> 111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>IBAN:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      TR1111111111111111
+                    </Text>
+                  </View>
                 </View>
-                <View style={styles.accountInformation}>
-                  <Text>IBAN:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    TR1111111111111111
-                  </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.bankInformations,
+                  selectedBank === "garanti"
+                    ? { backgroundColor: "#6eaa5e" }
+                    : { backgroundColor: "white" },
+                ]}
+                onPress={() => setSelectedBank("garanti")}
+              >
+                <Image
+                  source={{
+                    uri: "https://cdnuploads.aa.com.tr/uploads/sirkethaberleri/Contents/2018/11/30/thumbs_b_c_eee85060d5e32db6d1bb1e2da1ca285e.jpg",
+                  }}
+                  width={80}
+                  height={80}
+                  resizeMode="contain"
+                />
+                <View style={{ flexDirection: "column", gap: 5 }}>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Sahibi:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      Mehmet Rıdvan Gül
+                    </Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Numarası:</Text>
+                    <Text style={styles.accountInformationText}> 111111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Şube Kodu:</Text>
+                    <Text style={styles.accountInformationText}> 111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>IBAN:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      TR1111111111111111
+                    </Text>
+                  </View>
                 </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[
-                styles.bankInformations,
-                selectedBank === "ing"
-                  ? { backgroundColor: "#6eaa5e" }
-                  : { backgroundColor: "white" },
-              ]}
-              onPress={() => setSelectedBank("ing")}
-            >
-              <Image
-                source={{
-                  uri: "https://www.ing.com.tr/F/Documents/Images/kurumsal_logo_genel_mudurluk/ING_Logo_TuruncuBG_Big.png",
-                }}
-                width={80}
-                height={80}
-                resizeMode="contain"
-              />
-              <View style={{ flexDirection: "column", gap: 5 }}>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Sahibi:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    Mehmet Rıdvan Gül
-                  </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.bankInformations,
+                  selectedBank === "yapikredi"
+                    ? { backgroundColor: "#6eaa5e" }
+                    : { backgroundColor: "white" },
+                ]}
+                onPress={() => setSelectedBank("yapikredi")}
+              >
+                <Image
+                  source={{
+                    uri: "https://logowik.com/content/uploads/images/719_yapikredibankasi.jpg",
+                  }}
+                  width={80}
+                  height={80}
+                  resizeMode="contain"
+                />
+                <View style={{ flexDirection: "column", gap: 5 }}>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Sahibi:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      Mehmet Rıdvan Gül
+                    </Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Numarası:</Text>
+                    <Text style={styles.accountInformationText}> 111111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Şube Kodu:</Text>
+                    <Text style={styles.accountInformationText}> 111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>IBAN:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      TR1111111111111111
+                    </Text>
+                  </View>
                 </View>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Numarası:</Text>
-                  <Text style={styles.accountInformationText}> 111111</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.bankInformations,
+                  selectedBank === "teb"
+                    ? { backgroundColor: "#6eaa5e" }
+                    : { backgroundColor: "white" },
+                ]}
+                onPress={() => setSelectedBank("teb")}
+              >
+                <Image
+                  source={{
+                    uri: "https://upload.wikimedia.org/wikipedia/commons/9/95/TEB_LOGO.png",
+                  }}
+                  width={80}
+                  height={80}
+                  resizeMode="contain"
+                />
+                <View style={{ flexDirection: "column", gap: 5 }}>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Sahibi:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      Mehmet Rıdvan Gül
+                    </Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Numarası:</Text>
+                    <Text style={styles.accountInformationText}> 111111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Şube Kodu:</Text>
+                    <Text style={styles.accountInformationText}> 111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>IBAN:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      TR1111111111111111
+                    </Text>
+                  </View>
                 </View>
-                <View style={styles.accountInformation}>
-                  <Text>Şube Kodu:</Text>
-                  <Text style={styles.accountInformationText}> 111</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.bankInformations,
+                  selectedBank === "ziraat"
+                    ? { backgroundColor: "#6eaa5e" }
+                    : { backgroundColor: "white" },
+                ]}
+                onPress={() => setSelectedBank("ziraat")}
+              >
+                <Image
+                  source={{
+                    uri: "https://www.ziraatbank.com.tr/PublishingImages/Subpage/bankamiz/BankamizGorselleri/zb_logo.jpg",
+                  }}
+                  width={80}
+                  height={80}
+                  resizeMode="contain"
+                />
+                <View style={{ flexDirection: "column", gap: 5 }}>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Sahibi:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      Mehmet Rıdvan Gül
+                    </Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Numarası:</Text>
+                    <Text style={styles.accountInformationText}> 111111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Şube Kodu:</Text>
+                    <Text style={styles.accountInformationText}> 111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>IBAN:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      TR1111111111111111
+                    </Text>
+                  </View>
                 </View>
-                <View style={styles.accountInformation}>
-                  <Text>IBAN:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    TR1111111111111111
-                  </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.bankInformations,
+                  selectedBank === "halkbank"
+                    ? { backgroundColor: "#6eaa5e" }
+                    : { backgroundColor: "white" },
+                ]}
+                onPress={() => setSelectedBank("halkbank")}
+              >
+                <Image
+                  source={{
+                    uri: "https://www.halkbank.com.tr/content/dam/halkbank/tr/gorseller/bankam%C4%B1z/logolarimiz/hblogoerkek.jpg",
+                  }}
+                  width={80}
+                  height={80}
+                  resizeMode="contain"
+                />
+                <View style={{ flexDirection: "column", gap: 5 }}>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Sahibi:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      Mehmet Rıdvan Gül
+                    </Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Numarası:</Text>
+                    <Text style={styles.accountInformationText}> 111111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Şube Kodu:</Text>
+                    <Text style={styles.accountInformationText}> 111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>IBAN:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      TR1111111111111111
+                    </Text>
+                  </View>
                 </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[
-                styles.bankInformations,
-                selectedBank === "isbank"
-                  ? { backgroundColor: "#6eaa5e" }
-                  : { backgroundColor: "white" },
-              ]}
-              onPress={() => setSelectedBank("isbank")}
-            >
-              <Image
-                source={{
-                  uri: "https://geoim.bloomberght.com/2019/11/06/ver1573060975/2237390_620x349.jpg",
-                }}
-                width={80}
-                height={80}
-                resizeMode="contain"
-              />
-              <View style={{ flexDirection: "column", gap: 5 }}>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Sahibi:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    Mehmet Rıdvan Gül
-                  </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.bankInformations,
+                  selectedBank === "finansbank"
+                    ? { backgroundColor: "#6eaa5e" }
+                    : { backgroundColor: "white" },
+                ]}
+                onPress={() => setSelectedBank("finansbank")}
+              >
+                <Image
+                  source={{
+                    uri: "https://www.logovector.org/wp-content/uploads/logos/png/f/finansbank_logo.png",
+                  }}
+                  width={80}
+                  height={80}
+                  resizeMode="contain"
+                />
+                <View style={{ flexDirection: "column", gap: 5 }}>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Sahibi:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      Mehmet Rıdvan Gül
+                    </Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Numarası:</Text>
+                    <Text style={styles.accountInformationText}> 111111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Şube Kodu:</Text>
+                    <Text style={styles.accountInformationText}> 111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>IBAN:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      TR1111111111111111
+                    </Text>
+                  </View>
                 </View>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Numarası:</Text>
-                  <Text style={styles.accountInformationText}> 111111</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.bankInformations,
+                  selectedBank === "denizbank"
+                    ? { backgroundColor: "#6eaa5e" }
+                    : { backgroundColor: "white" },
+                ]}
+                onPress={() => setSelectedBank("denizbank")}
+              >
+                <Image
+                  source={{
+                    uri: "https://www.liblogo.com/img-logo/de3592fe4f-denizbank-logo-file-denizbank-logo-svg-wikimedia-commons.png",
+                  }}
+                  width={80}
+                  height={80}
+                  resizeMode="contain"
+                />
+                <View style={{ flexDirection: "column", gap: 5 }}>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Sahibi:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      Mehmet Rıdvan Gül
+                    </Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Numarası:</Text>
+                    <Text style={styles.accountInformationText}> 111111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Şube Kodu:</Text>
+                    <Text style={styles.accountInformationText}> 111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>IBAN:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      TR1111111111111111
+                    </Text>
+                  </View>
                 </View>
-                <View style={styles.accountInformation}>
-                  <Text>Şube Kodu:</Text>
-                  <Text style={styles.accountInformationText}> 111</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.bankInformations,
+                  selectedBank === "turkiyefinans"
+                    ? { backgroundColor: "#6eaa5e" }
+                    : { backgroundColor: "white" },
+                ]}
+                onPress={() => setSelectedBank("turkiyefinans")}
+              >
+                <Image
+                  source={{
+                    uri: "https://www.turkiyefinans.com.tr/SiteAssets/img//tf_logo_guide_02.jpg",
+                  }}
+                  width={80}
+                  height={80}
+                  resizeMode="contain"
+                />
+                <View style={{ flexDirection: "column", gap: 5 }}>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Sahibi:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      Mehmet Rıdvan Gül
+                    </Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Numarası:</Text>
+                    <Text style={styles.accountInformationText}> 111111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Şube Kodu:</Text>
+                    <Text style={styles.accountInformationText}> 111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>IBAN:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      TR1111111111111111
+                    </Text>
+                  </View>
                 </View>
-                <View style={styles.accountInformation}>
-                  <Text>IBAN:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    TR1111111111111111
-                  </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.bankInformations,
+                  selectedBank === "sekerbank"
+                    ? { backgroundColor: "#6eaa5e" }
+                    : { backgroundColor: "white" },
+                ]}
+                onPress={() => setSelectedBank("sekerbank")}
+              >
+                <Image
+                  source={{
+                    uri: "https://cdnuploads.aa.com.tr/uploads/sirkethaberleri/Contents/2022/05/06/thumbs_b_c_32f839edf4120abff70a43e895a2e0ad.jpg",
+                  }}
+                  width={80}
+                  height={80}
+                  resizeMode="contain"
+                />
+                <View style={{ flexDirection: "column", gap: 5 }}>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Sahibi:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      Mehmet Rıdvan Gül
+                    </Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Hesap Numarası:</Text>
+                    <Text style={styles.accountInformationText}> 111111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>Şube Kodu:</Text>
+                    <Text style={styles.accountInformationText}> 111</Text>
+                  </View>
+                  <View style={styles.accountInformation}>
+                    <Text>IBAN:</Text>
+                    <Text style={styles.accountInformationText}>
+                      {" "}
+                      TR1111111111111111
+                    </Text>
+                  </View>
                 </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[
-                styles.bankInformations,
-                selectedBank === "garanti"
-                  ? { backgroundColor: "#6eaa5e" }
-                  : { backgroundColor: "white" },
-              ]}
-              onPress={() => setSelectedBank("garanti")}
-            >
-              <Image
-                source={{
-                  uri: "https://cdnuploads.aa.com.tr/uploads/sirkethaberleri/Contents/2018/11/30/thumbs_b_c_eee85060d5e32db6d1bb1e2da1ca285e.jpg",
-                }}
-                width={80}
-                height={80}
-                resizeMode="contain"
-              />
-              <View style={{ flexDirection: "column", gap: 5 }}>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Sahibi:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    Mehmet Rıdvan Gül
-                  </Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Numarası:</Text>
-                  <Text style={styles.accountInformationText}> 111111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Şube Kodu:</Text>
-                  <Text style={styles.accountInformationText}> 111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>IBAN:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    TR1111111111111111
-                  </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[
-                styles.bankInformations,
-                selectedBank === "yapikredi"
-                  ? { backgroundColor: "#6eaa5e" }
-                  : { backgroundColor: "white" },
-              ]}
-              onPress={() => setSelectedBank("yapikredi")}
-            >
-              <Image
-                source={{
-                  uri: "https://logowik.com/content/uploads/images/719_yapikredibankasi.jpg",
-                }}
-                width={80}
-                height={80}
-                resizeMode="contain"
-              />
-              <View style={{ flexDirection: "column", gap: 5 }}>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Sahibi:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    Mehmet Rıdvan Gül
-                  </Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Numarası:</Text>
-                  <Text style={styles.accountInformationText}> 111111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Şube Kodu:</Text>
-                  <Text style={styles.accountInformationText}> 111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>IBAN:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    TR1111111111111111
-                  </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[
-                styles.bankInformations,
-                selectedBank === "teb"
-                  ? { backgroundColor: "#6eaa5e" }
-                  : { backgroundColor: "white" },
-              ]}
-              onPress={() => setSelectedBank("teb")}
-            >
-              <Image
-                source={{
-                  uri: "https://upload.wikimedia.org/wikipedia/commons/9/95/TEB_LOGO.png",
-                }}
-                width={80}
-                height={80}
-                resizeMode="contain"
-              />
-              <View style={{ flexDirection: "column", gap: 5 }}>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Sahibi:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    Mehmet Rıdvan Gül
-                  </Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Numarası:</Text>
-                  <Text style={styles.accountInformationText}> 111111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Şube Kodu:</Text>
-                  <Text style={styles.accountInformationText}> 111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>IBAN:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    TR1111111111111111
-                  </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[
-                styles.bankInformations,
-                selectedBank === "ziraat"
-                  ? { backgroundColor: "#6eaa5e" }
-                  : { backgroundColor: "white" },
-              ]}
-              onPress={() => setSelectedBank("ziraat")}
-            >
-              <Image
-                source={{
-                  uri: "https://www.ziraatbank.com.tr/PublishingImages/Subpage/bankamiz/BankamizGorselleri/zb_logo.jpg",
-                }}
-                width={80}
-                height={80}
-                resizeMode="contain"
-              />
-              <View style={{ flexDirection: "column", gap: 5 }}>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Sahibi:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    Mehmet Rıdvan Gül
-                  </Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Numarası:</Text>
-                  <Text style={styles.accountInformationText}> 111111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Şube Kodu:</Text>
-                  <Text style={styles.accountInformationText}> 111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>IBAN:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    TR1111111111111111
-                  </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[
-                styles.bankInformations,
-                selectedBank === "halkbank"
-                  ? { backgroundColor: "#6eaa5e" }
-                  : { backgroundColor: "white" },
-              ]}
-              onPress={() => setSelectedBank("halkbank")}
-            >
-              <Image
-                source={{
-                  uri: "https://www.halkbank.com.tr/content/dam/halkbank/tr/gorseller/bankam%C4%B1z/logolarimiz/hblogoerkek.jpg",
-                }}
-                width={80}
-                height={80}
-                resizeMode="contain"
-              />
-              <View style={{ flexDirection: "column", gap: 5 }}>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Sahibi:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    Mehmet Rıdvan Gül
-                  </Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Numarası:</Text>
-                  <Text style={styles.accountInformationText}> 111111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Şube Kodu:</Text>
-                  <Text style={styles.accountInformationText}> 111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>IBAN:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    TR1111111111111111
-                  </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[
-                styles.bankInformations,
-                selectedBank === "finansbank"
-                  ? { backgroundColor: "#6eaa5e" }
-                  : { backgroundColor: "white" },
-              ]}
-              onPress={() => setSelectedBank("finansbank")}
-            >
-              <Image
-                source={{
-                  uri: "https://www.logovector.org/wp-content/uploads/logos/png/f/finansbank_logo.png",
-                }}
-                width={80}
-                height={80}
-                resizeMode="contain"
-              />
-              <View style={{ flexDirection: "column", gap: 5 }}>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Sahibi:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    Mehmet Rıdvan Gül
-                  </Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Numarası:</Text>
-                  <Text style={styles.accountInformationText}> 111111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Şube Kodu:</Text>
-                  <Text style={styles.accountInformationText}> 111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>IBAN:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    TR1111111111111111
-                  </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[
-                styles.bankInformations,
-                selectedBank === "denizbank"
-                  ? { backgroundColor: "#6eaa5e" }
-                  : { backgroundColor: "white" },
-              ]}
-              onPress={() => setSelectedBank("denizbank")}
-            >
-              <Image
-                source={{
-                  uri: "https://www.liblogo.com/img-logo/de3592fe4f-denizbank-logo-file-denizbank-logo-svg-wikimedia-commons.png",
-                }}
-                width={80}
-                height={80}
-                resizeMode="contain"
-              />
-              <View style={{ flexDirection: "column", gap: 5 }}>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Sahibi:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    Mehmet Rıdvan Gül
-                  </Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Numarası:</Text>
-                  <Text style={styles.accountInformationText}> 111111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Şube Kodu:</Text>
-                  <Text style={styles.accountInformationText}> 111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>IBAN:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    TR1111111111111111
-                  </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[
-                styles.bankInformations,
-                selectedBank === "turkiyefinans"
-                  ? { backgroundColor: "#6eaa5e" }
-                  : { backgroundColor: "white" },
-              ]}
-              onPress={() => setSelectedBank("turkiyefinans")}
-            >
-              <Image
-                source={{
-                  uri: "https://www.turkiyefinans.com.tr/SiteAssets/img//tf_logo_guide_02.jpg",
-                }}
-                width={80}
-                height={80}
-                resizeMode="contain"
-              />
-              <View style={{ flexDirection: "column", gap: 5 }}>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Sahibi:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    Mehmet Rıdvan Gül
-                  </Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Numarası:</Text>
-                  <Text style={styles.accountInformationText}> 111111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Şube Kodu:</Text>
-                  <Text style={styles.accountInformationText}> 111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>IBAN:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    TR1111111111111111
-                  </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[
-                styles.bankInformations,
-                selectedBank === "sekerbank"
-                  ? { backgroundColor: "#6eaa5e" }
-                  : { backgroundColor: "white" },
-              ]}
-              onPress={() => setSelectedBank("sekerbank")}
-            >
-              <Image
-                source={{
-                  uri: "https://cdnuploads.aa.com.tr/uploads/sirkethaberleri/Contents/2022/05/06/thumbs_b_c_32f839edf4120abff70a43e895a2e0ad.jpg",
-                }}
-                width={80}
-                height={80}
-                resizeMode="contain"
-              />
-              <View style={{ flexDirection: "column", gap: 5 }}>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Sahibi:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    Mehmet Rıdvan Gül
-                  </Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Hesap Numarası:</Text>
-                  <Text style={styles.accountInformationText}> 111111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>Şube Kodu:</Text>
-                  <Text style={styles.accountInformationText}> 111</Text>
-                </View>
-                <View style={styles.accountInformation}>
-                  <Text>IBAN:</Text>
-                  <Text style={styles.accountInformationText}>
-                    {" "}
-                    TR1111111111111111
-                  </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-       
+              </TouchableOpacity>
             </View>
-            <View style = {{marginBottom:50, marginTop:15}}>
-              <Button text={"Ödeme Yap"} backgroundColor={"#ee3a1f"}  color={"#FFF"} borderRadius={12}/>
+            <View style={{ marginBottom: 50, marginTop: 15 }}>
+              <Button
+                text={"Ödeme Yap"}
+                backgroundColor={"#ee3a1f"}
+                color={"#FFF"}
+                borderRadius={12}
+              />
             </View>
           </View>
         ) : (
@@ -667,43 +670,5 @@ function PaymentInformations() {
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  optionsPayment: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginTop: 15,
-    borderWidth: 1,
-    padding: 15,
-    borderRadius: 5,
-    borderColor: "#D3D3D3",
-  },
-  bankInformations: {
-    flexDirection: "row",
-    alignItems: "center",
-    borderBottomWidth: 1,
-    padding: 10,
-  },
-  accountInformation: {
-    flexDirection: "row",
-    marginLeft: 10,
-    alignItems: "center",
-  },
-  accountInformationText: {
-    fontWeight: "600",
-  },
-  cardContainer: {
-    backgroundColor: "#167",
-    padding: 50,
-    marginTop: 15,
-    borderRadius: 5,
-  },
-  cardNumber: {
-    color: "#FFF",
-    fontSize: 20,
-    letterSpacing: 3,
-    marginTop: 15,
-  },
-});
 
 export default PaymentInformations;
